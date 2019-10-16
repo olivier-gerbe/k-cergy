@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CSV Format
+model_code;portfolio_template1;portfolio_template1_label;portfolio_template2;portfolio_template2_label;portfolio_template3;portfolio_template3_label
+...
+identifier1;lastname1;firstname1;email1;role1;role2;role3
+...
+ -->
+<model>
+	<for-each-line>
+		<!-- ====================================== -->
+		<create-user>
+			<identifier>
+				<txtval select='identifier1'/>
+			</identifier>
+			<lastname>
+				<txtval select='lastname1'/>
+			</lastname>
+			<firstname>
+				<txtval select='firstname1'/>
+			</firstname>
+			<email>
+				<txtval select='email1'/>
+			</email>
+			<password>
+				<txtval select='email1'/>
+			</password>
+			<designer>
+				<txtval>1</txtval>
+			</designer>
+		</create-user>
+		<!-- ====================================== -->
+		<create-tree id='portfolio1'>
+			<template>
+				<txtval select='//portfolio_template1'/>
+			</template>
+			<code>
+				<txtval>TECFA-</txtval>
+				<txtval select='identifier1'/>
+				<txtval select='//portfolio_template1_label'/>
+			</code>
+			<label>
+				<txtval>TECFA</txtval>
+				<txtval select='//portfolio_template1_label'/>
+				<txtval> </txtval>
+				<txtval select='firstname1'/>
+				<txtval> </txtval>
+				<txtval select='lastname1'/>
+			</label>
+		</create-tree>
+		<!-- ============== -->
+		<create-tree id='portfolio2'>
+			<template>
+				<txtval select='//portfolio_template2'/>
+			</template>
+			<code>
+				<txtval>TECFA-</txtval>
+				<txtval select='identifier1'/>
+				<txtval select='//portfolio_template2_label'/>
+			</code>
+			<label>
+				<txtval>TECFA</txtval>
+				<txtval select='//portfolio_template2_label'/>
+				<txtval> </txtval>
+				<txtval select='firstname1'/>
+				<txtval> </txtval>
+				<txtval select='lastname1'/>
+			</label>
+		</create-tree>
+		<!-- ============== -->
+		<create-tree id='portfolio3'>
+			<template>
+				<txtval select='//portfolio_template3'/>
+			</template>
+			<code>
+				<txtval>TECFA-</txtval>
+				<txtval select='identifier1'/>
+				<txtval select='//portfolio_template3_label'/>
+			</code>
+			<label>
+				<txtval>TECFA</txtval>
+				<txtval select='//portfolio_template3_label'/>
+				<txtval> </txtval>
+				<txtval select='firstname1'/>
+				<txtval> </txtval>
+				<txtval select='lastname1'/>
+			</label>
+		</create-tree>
+		<!-- ============== -->
+		<create-tree id='portfolio4'>
+			<template>
+				<txtval select='//portfolio_template4'/>
+			</template>
+			<code>
+				<txtval>TECFA-</txtval>
+				<txtval select='identifier1'/>
+				<txtval select='//portfolio_template4_label'/>
+			</code>
+			<label>
+				<txtval>TECFA</txtval>
+				<txtval select='//portfolio_template4_label'/>
+				<txtval> </txtval>
+				<txtval select='firstname1'/>
+				<txtval> </txtval>
+				<txtval select='lastname1'/>
+			</label>
+		</create-tree>
+		<!-- ====================================== -->
+		<share-tree select='portfolio1'>
+			<role select='role1'/>
+			<user select='identifier1'/>
+		</share-tree>
+		<!-- ============== -->
+		<share-tree select='portfolio2'>
+			<role select='role2'/>
+			<user select='identifier1'/>
+		</share-tree>
+		<!-- ============== -->
+		<share-tree select='portfolio3'>
+			<role select='role3'/>
+			<user select='identifier1'/>
+		</share-tree>
+		<!-- ============== -->
+		<share-tree select='portfolio4'>
+			<role select='role4'/>
+			<user select='identifier1'/>
+		</share-tree>
+		<!-- ====================================== -->
+	</for-each-line>
+</model>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<model>
+	<for-each-portfolio select="code=*='mimi'">
+		<!-- ====================================== -->
+		<cell>
+			<txtval select="asmContext[semtag='firstname']"/>
+			<txtval> </txtval>
+			<txtval select="asmContext[semtag='lastname']"/>
+		</cell>
+		<cell>
+			<txtval select="asmContext[semtag='note']"/>
+		</cell>		
+	</for-each-portfolio>
+</model>

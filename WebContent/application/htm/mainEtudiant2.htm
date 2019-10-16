@@ -1,0 +1,823 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>KIUT e-Portfolio UCP</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+	<!-- =========================================== -->
+	<link rel="stylesheet" type="text/css" href="../../other/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../other/css/bootstrap-responsive.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../other/css/bootstrap-wysihtml5.css" />
+	<link rel="stylesheet" type="text/css" href="../../other/css/jquery-ui.css" />
+	<link rel="stylesheet" type="text/css" href="../../other/css/font-awesome/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../karuta/css/karuta.css" />
+	<link rel="stylesheet" type="text/css" href="../../other/pick-a-color/css/pick-a-color-1.1.8.min.css" />
+	<!-- =========================================== -->
+	<script src="../../other/js/jquery-1.10.2.js"></script>
+	<script src="../../other/js/jquery-ui-1.10.3.custom.min.js"></script>
+	<script src="../../other/bootstrap/js/bootstrap.min.js"></script>
+	<script src='../../other/wysihtml5/wysihtml5-0.3.0.js'> </script>
+	<script src='../../other/wysihtml5/parser.js'> </script>
+	<script src="../../other/js/jquery.browser.js"></script>
+	<!--script src="../../other/js/jquery-iframe-auto-height.js"></script-->
+	<!--[if lt IE 9]>
+		<script src='http://html5shiv.googlecode.com/svn/trunk/html5.js'></script>
+	<![endif]-->
+	<script src="../../other/js/bootstrap-wysihtml5.js"></script>
+	<script src="../../other/js/jquery_hotkeys.js"></script>
+	<script src="../../other/js/JQueryRC4.js"></script>
+	<script src="../../other/js/spin.js"></script>
+	<script src="../../other/js/jquery.spin.js"></script>
+	<script src="../../other/js/js.cookie.js"></script>
+	<!-- =============================================================== -->
+	<script src="../../karuta/js/karuta.js"></script>
+	<script src="../../karuta/js/UICom.js"></script>
+	<!-- =============================================================== -->
+	<script src="../../karuta/js/model/Type_Portfolio.js"></script>
+	<script src="../../karuta/js/model/Type_Node.js"></script>
+	<script src="../../karuta/js/model/Type_User.js"></script>
+	<script src="../../karuta/js/UICom.js"></script>
+	<!-- =============================================================== -->
+	<link type="text/css" href="../../other/lightbox/css/lightbox.css" rel="stylesheet" />
+	<script src="../../other/lightbox/js/lightbox-2.6.min.js"></script>
+	<!-- =============================================================== -->
+	<link type="text/css" href="../../other/jplayer/jplayer.blue.monday.css" rel="stylesheet" />
+	<script src="../../other/jplayer/jquery.jplayer.min.js"></script>
+	<!-- =============================================================== -->
+	<script src="../../other/js/jquery.ui.widget.js"></script>
+	<script src="../../other/js/jquery.iframe-transport.js"></script>
+	<script src="../../other/js/jquery.fileupload.js"></script>
+	<!-- =============================================================== -->
+	<script src="../../other/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+	<script src="../../other/bootstrap-datepicker/bootstrap-datepicker.fr.js"></script>
+	<link rel="stylesheet" href="../../other/bootstrap-datepicker/datepicker.css" />
+	<!-- =============================================================== -->
+	<script src="../../karuta/js/resources/Type_Calendar.js"></script>
+	<script src="../../karuta/js/resources/Type_Comments.js"></script>
+	<script src="../../karuta/js/resources/Type_Document.js"></script>
+	<script src="../../karuta/js/resources/Type_Proxy.js"></script>
+	<script src="../../karuta/js/resources/Type_TextField.js"></script>
+	<script src="../../karuta/js/resources/Type_Field.js"></script>
+	<script src="../../karuta/js/resources/Type_Image.js"></script>
+	<script src="../../karuta/js/resources/Type_Get_Resource.js"></script>
+	<script src="../../karuta/js/resources/Type_Get_Get_Resource.js"></script>
+	<script src="../../karuta/js/resources/Type_URL.js"></script>
+	<script src="../../karuta/js/resources/Type_Item.js"></script>
+	<script src="../../karuta/js/resources/Type_Video.js"></script>
+	<script src="../../karuta/js/resources/Type_Color.js"></script>
+	<!-- =============================================================== -->
+	<script src="../../application/js/bubble.js"></script>
+	<script src="../../application/_init.js"></script>
+	<!-- =============================================================== -->
+	<script src="../../karuta/js/version.js"></script>
+	<!-- =============================================================== -->
+	<script src="../../karuta/js/languages/locale_fr.js"></script>
+	<!-- =============================================================== -->
+	<script src="../js/iut2.js"></script>
+	<script src="../js/locale_lang.js"></script>
+	<script src="../js/experience.js"></script>
+	<script src="../js/experience_perso.js"></script>
+	<script src="../js/diploma.js"></script>
+	<script src="../js/stage.js"></script>
+	<script src="../js/formation.js"></script>
+	<script src="../js/alternance.js"></script>
+	<script src="../js/projet.js"></script>
+	<script src="../js/situation.js"></script>
+	<script src="../js/contact.js"></script>
+	<script src="../js/fullcontact.js"></script>
+	<script src="../js/competence.js"></script>
+	<script src="../js/qualites_perso.js"></script>
+	<script src="../js/profile.js"></script>
+	<script src="../js/cv.js"></script>
+	<script src="../js/langue.js"></script>
+	<script src="../js/feedback.js"></script>
+	<script src="../js/monprojet.js"></script>
+	<script src="../js/help.js"></script>
+	<script src="../js/ftlv.js"></script>
+	<!-- =========================================== -->
+	<script src="../../other/colorpicker/js/evol.colorpicker.min.js"></script>
+	<link type="text/css" href="../../other/colorpicker/css/evol.colorpicker.min.css" rel="stylesheet" />
+	
+	<script src="../../other/pick-a-color/js/tinycolor-0.9.15.min.js"></script>
+	<script src="../../other/pick-a-color/js/pick-a-color-1.1.8.min.js"></script>
+	<script src="../../other/js/jquery-qrcode-0.14.0.js"></script>
+	<script src="../../other/js/ZeroClipboard.js"></script>
+	<!-- =========================================== -->
+	<script src="../js/specific.js"></script>
+	<link rel="stylesheet" href="../../application/css/specific.css" />
+	
+</head>
+<body>
+	<div id="navbar" class="navbar navbar-fixed-top"></div>
+	<div id="container" class="container iut2">
+		<!-- ==================================================================================================== -->
+		<!-- ==================================================================================================== -->
+		<!-- ======================================= PROFILE ==================================================== -->
+		<!-- ==================================================================================================== -->
+		<!-- ==================================================================================================== -->
+		<div id='profil' name='page' class='hide'>
+			<h3 class="align-left"><i class="fa fa-user"></i> MON COMPTE</h3>
+		</div>
+		<!-- ==================================================================================================== -->
+		<!-- ==================================================================================================== -->
+		<!-- ======================================= ACCUEIL ==================================================== -->
+		<!-- ==================================================================================================== -->
+		<!-- ==================================================================================================== -->
+		<div id='accueil' name='page'>
+			<div class='row-fluid'>
+				<div class="span6">
+					<div id='profile-short' class="media"></div>
+					<p class='accueil-p'>KARUTA IUT Portfolio a pour objectif de faciliter votre démarche compétences et métiers afin que vous puissiez construire votre projet personnel professionnel efficacement.
+					 Vous y aurez accès pendant vos études mais également un fois diplômé, si vous le souhaitez, dans une logique de formation tout au long de la vie pour faciliter votre insertion 
+					 et votre future évolution professionnelle.</p>
+					 <div class='alert alert-block alert-bleu'>
+						<div class='row-fluid'>
+							<div class="span3">
+								<img class='picto-accueil' src='../img/picto-export-accueil.png'/>
+							</div>
+					<!-- ================================================================== -->
+							<div class='span9'>
+								<h5>Export et informations</h5>
+					 			<p>Depuis le lien Mon compte en haut à droite, exportez votre eportfolio en format zip, modifier vos informations, etc.</p>
+							</div>
+						</div>						
+					 </div>
+					 <div class='alert alert-block alert-vert'>
+						<div class='row-fluid'>
+							<div class="span3">
+								<img class='picto-accueil' src='../img/picto-danger-accueil.png'/>
+							</div>
+					<!-- ================================================================== -->
+							<div class='span9'>
+					 	<h5>L'outil ne fait pas tout</h5>
+						Cet outil est facilitateur mais pour réussir votre projet vous aurez besoin d’un bon accompagnement 
+						et de vous engager activement dans votre démarche.
+							</div>
+						</div>
+					 </div>
+				</div>
+				<!-- ================================================================== -->
+				<div id='demarche' class='span6'>
+					<h2><img id='demarche-img' src='../img/compass.png'/> Votre démarche</h2>
+					<div class="panel-group" id="panel-demarche">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								
+								<a class="panel-title" data-toggle="collapse"
+									data-parent="#panel-demarche" href="#panel-element-reperercomp"><i class="fa fa-plus-circle" aria-hidden="true" style='float:right'></i>Repérer vos compétences</a>
+							</div>
+							<div id="panel-element-reperercomp"
+								class="panel-collapse collapse">
+								<div class="panel-body">
+									<p style="text-align: justify;">Dans la rubrique Mon e-portfolio &gt; Mon histoire, vous êtes invité à <strong>raconter votre histoire</strong>.</p>
+									<p style="text-align: justify;"><strong>Détaillez vos différentes expériences</strong> (formations académiques ou autre formations, situations professionnelles et personnelles, expérience globale en terme de langues étrangères…).</p>
+									<p style="text-align: justify;">Pour chacune d’entre elles, vous pourrez <strong>rajouter des compétences</strong> que vous avez acquises et mobilisées de 2 types : «&nbsp;métiers&nbsp;» ou «&nbsp;transversales et personnelles&nbsp;» et ce depuis un référentiel ou de manière libre. Ensuite vous pourrez vous évaluer.</p>
+									<blockquote>
+									<p style="text-align: justify;">Astuce : n’oubliez pas que les expériences personnelles peuvent être, elles aussi, riches en compétences.</p>
+									<p style="text-align: justify;">NB : toutes les compétences pour lesquelles votre évaluation est positive se retrouvera dans votre bilan et votre CV.</p>
+									</blockquote>
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<a class="panel-title" data-toggle="collapse"
+									data-parent="#panel-demarche" href="#panel-element-suivrecomp"><i class="fa fa-plus-circle" aria-hidden="true" style='float:right'></i>Faites votre bilan</a>
+							</div>
+							<div id="panel-element-suivrecomp"
+								class="panel-collapse collapse">
+								<div class="panel-body">
+								<div class="et_pb_toggle_content clearfix" style="display: block;">
+								<div style="display: block;" class="elementor-tab-content elementor-clearfix elementor-active" data-tab="1">
+								<p style="text-align: justify;">Dans la rubrique Mon e-portfolio &gt; Mon bilan, vous êtes invité à <strong>faire </strong>(ou plutôt à prendre connaissance de) <strong>votre bilan.<br>
+								</strong></p>
+								<p style="text-align: justify;">Toutes vos compétences vous seront d’abord présentées non plus par expériences mais <strong>par domaines métiers d’une part, et d’autre part par compétences transversales, langues et autres compétences personnelles.</strong> Même si, par exemple, vous suiviez des formations de gestionnaire vous pourriez observer l’acquisition de compétences également dans le domaine métier de l’information et de la communication.</p>
+								<blockquote><p>Grâce à ce bilan vous prendrez conscience progressivement que votre univers des possibles en termes de métiers s’agrandit au fur et à mesure de l’acquisition de compétences.</p></blockquote>
+								</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<a class="panel-title" data-toggle="collapse"
+									data-parent="#panel-demarche" href="#panel-element-cartecomp"><i class="fa fa-plus-circle" aria-hidden="true" style='float:right'></i>Valoriser ses compétences et les relier à ses motivations : carte
+									interactive personnelle</a>
+							</div>
+							<div id="panel-element-cartecomp" class="panel-collapse collapse">
+								<div class="panel-body">
+
+										<div style="display: block;" class="elementor-tab-content elementor-clearfix elementor-active" data-tab="1">
+										<p style="text-align: justify;">Dans la rubrique Mon e-portfolio &gt; Mon projet vous aller affiner votre Projet Personnel Professionnel.</p>
+										<p style="text-align: justify;">Si vous avez déjà bien réfléchi à votre projet, commencez à écrire ce que vous visez. Ensuite, réfléchissez aux compétences que vous préférez, celles qui vous donnent envie de vous engager en terme d’action ! <strong>Faites votre top 10 de compétences métiers, transversales et personnelles</strong> !<strong><br>
+										</strong></p>
+										<p>Dans la sous-rubrique «&nbsp;Mes ressources métiers&nbsp;» parcourez les domaines métiers de l’IUT2 (lien vers site web IUT2 Grenoble Alpes rubrique METIERS) et les fiches métiers. Lorsque vous trouvez des<strong> fiches métiers qui vous intéressent comparez les compétences attendues à vos compétences préférées</strong> et essayez de vous situer.</p>
+										<p style="text-align: justify;">La sous-rubrique «&nbsp;Mon environnement pro&nbsp;» est en cours de développement. Dans un 1er temps un démonstrateur sera mis en place afin de vous <strong>permettre d’établir votre profil personnel professionnel</strong>. Par la suite, vous pourrez voir apparaître une carte qui <strong>affiche, en fonction de votre profil, des fiches métiers et offres d’emploi proches de vos motivations</strong>. Dans tous les cas vous serez libre d’explorer cette carte et de vous éloigner des propositions automatiques. Par la suite, vous verrez également apparaître les <strong>parcours de formations possibles pour atteindre les métiers qui vous motivent</strong> ainsi que les <strong>parcours d’expériences et/ou de formation de vos pairs</strong>.</p>
+										<blockquote><p>Cette rubrique «&nbsp;Mon projet&nbsp;» est très stratégique pour vous. Elle ne remplacera pas l’accompagnement par vos référents PPP mais elle vous permettra de devenir encore plus acteur de votre choix de vie.</p></blockquote>
+										</div>
+
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<a class="panel-title" data-toggle="collapse"
+									data-parent="#panel-demarche" href="#panel-element-cvcomp"><i class="fa fa-plus-circle" aria-hidden="true" style='float:right'></i>Valoriser ses compétences en réalisant des CV intelligents</a>
+							</div>
+							<div id="panel-element-cvcomp" class="panel-collapse collapse">
+								<div class="panel-body">
+
+									<div class="et_pb_toggle_content clearfix" style="display: block;">
+														<div style="display: block;" class="elementor-tab-content elementor-clearfix elementor-active" data-tab="1">
+									<p style="text-align: justify;">Dans la rubrique Mon e-portfolio &gt; Ma valorisation, vous êtes invité à <strong>communiquer sur votre profil d’expériences, de compétences et plus !</strong></p>
+									<p>Il est important d’investir du temps sur certains réseaux sociaux professionnels tels que LinkedIN et à moindre mesure Viadéo pour optimiser ses chances d’être recruté, maîtriser son identité numérique (professionnelle) et développer son réseau (en plus de celui de la sphère humaine non virtuelle). Mais ce n’est pas suffisant ! <strong>Certains outils de valorisation doivent être travaillés de manière cohérente avec votre projet personnel professionnel et en cohérence avec vos profils sur les réseaux sociaux pro.</strong></p>
+									<p style="text-align: justify;">L’un des premiers outils de valorisation de son potentiel professionnel reste toujours le CV. Dans la sous-rubrique <strong>«&nbsp;Créer un CV&nbsp;» vous verrez apparître automatiquement tout le travail réalisé dans le ePortfolio</strong> sous forme de CV qu’il faudra compléter avec vos autres données personnelles. Ce n’est pas un CV que vous pourrez transmettre tel quel à un recruteur mais une base de CV qui vous permettra d’en construire plusieurs autres adaptés aux postes que vous visez. Vous pourrez exporter votre CV au format PDF ou RTF (Word).</p>
+									<p>Nous avons également implémenté dans ce ePortfolio un outil interactif de «&nbsp;Marketing de soi&nbsp;» pour vous permettre de mettre en scène et de justifier vos compétences et expériences, et de les relier à vos motivations. Il s’agit de votre «&nbsp;<strong>Carte personnelle ePortfolio</strong>»&nbsp;. Vous pourrez créer des bulles cliquables plus ou moins grosses qui représenteront vos intérêts personnels et/ou professionnels. A l’intérieur de ces bulles vous pourrez rajouter d’autres bulles qui contiennent des compétences, des bulles qui les illustrent par des réalisations significatives (liens vers des fichiers, vers un blog, ou insertion d’images…), etc. Vous pourrez diffuser cette carte sur votre résumé LinkedIN, par lien web ou encore par QR-Code sur votre CV imprimé.</p>
+									<blockquote><p>Plutôt que de laisser le recruteur se faire une image de vous en vous «&nbsp;Googlelisant&nbsp;» lorsque vous candidatez à une offre d’emploi ou de stage, reprenez la main en enrichissant votre CV d’une carte ePortfolio personnelle et interactive qu’il pourra consulter pour en savoir plus sur vous. Développez également vos réseaux !</p></blockquote>
+									</div>
+													</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<h2><img id='objectif-img' src='../img/objectif.png'/> Vos objectifs</h2>
+					
+					<h4>Vous connaitre en terme de profil professionnel et être capable de :</h4>
+							<ul>
+							<li>verbaliser vos compétences préférées<strong></strong></li>
+							<li>construire efficacement son parcours personnel professionnel</li>
+							<li>valoriser votre profil professionnel pour un recrutement</li>
+							</ul>
+				
+    			</div>
+ 			</div>
+		</div>
+		<!-- ==================================================================================================== -->
+		<!-- ==================================================================================================== -->
+		<!-- ======================================= HISTOIRE ================================================= -->
+		<!-- ==================================================================================================== -->
+		<!-- ==================================================================================================== -->
+		<div id='historique' name='page' class='hide'>
+				<ol class="breadcrumb">
+				<li><a id='accueil' href="#" onclick="show_view('accueil');">Accueil</a><span class="divider">/</span></li>
+				<li class="active">Mon e-portfolio<span class="divider">/</span></li>
+				<li class="active">Mon histoire<span class="divider">/</span></li>
+				<li id='view_label_histo' class="active"></li>
+			</ol>
+	
+			<h3 class="align-left"><i class="fa fa-suitcase"></i> MON HISTOIRE<span id='help-1'></span></h3>
+	
+			<!-- ====================================================================== -->
+			<div id="portfolio_histo">
+				<ul id="tabs_histo" class="nav nav-tabs" data-tabs="tabs">
+					<li><a href="#resume_histo" data-toggle="tab" onclick="$('#view_label_histo').html(view_label['resume']);" class="text-noir">Vue d'ensemble</a></li>
+					<li><a href="#academiques_histo" data-toggle="tab" onclick="$('#view_label_histo').html(view_label['academiques']);" class="text-orange">Formations académiques</a></li>
+					<li><a href="#autresformations_histo" data-toggle="tab" onclick="$('#view_label_histo').html(view_label['autresformations']);" class="text-bleu">Autres formations</a></li>
+					<li><a href="#experiencespro_histo" data-toggle="tab" onclick="$('#view_label_histo').html(view_label['experiencespro']);" class="text-vert">Expériences pro.</a></li>
+					<li><a href="#experiencesperso_histo" data-toggle="tab" onclick="$('#view_label_histo').html(view_label['experiencesperso']);" class="text-violet">Expériences perso.</a></li>
+					<li><a href="#langues_histo" data-toggle="tab" onclick="$('#view_label_histo').html(view_label['langues']);" class="text-gris">Langues</a></li>
+				</ul>
+	
+				<div id="tab-content_histo" class="tab-content">
+					<!-- ================================================================== -->
+					<div class="tab-pane" id="resume_histo">
+						<div class="container">
+							<div class='row-fluid'>
+								<div class="span6">
+									<div class="alert alert-orange alert-block">
+										<h3 align="center">Formations académiques</h3>
+										<div id="diplomes-short_histo"><h4><img src='../../karuta/img/ajax-loader.gif'/> <script language = 'javascript'>document.write(karutaStr[LANG]['loading'])</script></h4></div>
+										<div id="situations-short_histo"><h4><img src='../../karuta/img/ajax-loader.gif'/> <script language = 'javascript'>document.write(karutaStr[LANG]['loading'])</script></h4></div>
+									</div>
+		
+									<div class="alert alert-block alert-bleu">
+										<h3 align="center">Autres formations</h3>
+										<div id="formations-short_histo"><h4><img src='../../karuta/img/ajax-loader.gif'/> <script language = 'javascript'>document.write(karutaStr[LANG]['loading'])</script></h4></div>
+									</div>
+									<div class="alert alert-block alert-gris">
+										<h3 align="center">Langues étrangères</h3>
+										<div id="langues-short_histo"><h4><img src='../../karuta/img/ajax-loader.gif'/> <script language = 'javascript'>document.write(karutaStr[LANG]['loading'])</script></h4></div>
+									</div>
+								</div>
+								<div class="span6">
+									<div class="alert alert-block alert-vert">
+										<h3 align="center">Expériences professionnelles</h3>
+										<div id="experiences-short_histo"><h4><img src='../../karuta/img/ajax-loader.gif'/> <script language = 'javascript'>document.write(karutaStr[LANG]['loading'])</script></h4></div>
+										<div id="stages-short_histo"><h4><img src='../../karuta/img/ajax-loader.gif'/> <script language = 'javascript'>document.write(karutaStr[LANG]['loading'])</script></h4></div>
+										<div id="alternances-short_histo"><h4><img src='../../karuta/img/ajax-loader.gif'/> <script language = 'javascript'>document.write(karutaStr[LANG]['loading'])</script></h4></div>
+										<div id="projets-short_histo"><h4><img src='../../karuta/img/ajax-loader.gif'/> <script language = 'javascript'>document.write(karutaStr[LANG]['loading'])</script></h4></div>
+									</div>
+									<div class="alert alert-block alert-violet">
+										<h3 align="center">Expériences personnelles</h3>
+										<div id="exp-persos-short_histo"><h4><img src='../../karuta/img/ajax-loader.gif'/><script language = 'javascript'>document.write(karutaStr[LANG]['loading'])</script></h4></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ================================================================== -->
+					<div class="tab-pane" id="academiques_histo">
+						<div class='row-fluid'>
+							<div class="span12">
+								<div id="diplomes-detail_histo"><h4><img src='../../karuta/img/ajax-loader.gif'/><script language = 'javascript'>document.write(karutaStr[LANG]['loading'])</script></h4></div>
+								<div id="situations-detail_histo"><h4><img src='../../karuta/img/ajax-loader.gif'/><script language = 'javascript'>document.write(karutaStr[LANG]['loading'])</script></h4></div>
+							</div>
+						</div>
+					</div>
+					<!-- ================================================================== -->
+					<div class="tab-pane" id="autresformations_histo">
+						<div class='row-fluid'>
+							<div class="span12">
+								<div id="formations-detail_histo"><h4><img src='../../karuta/img/ajax-loader.gif'/><script language = 'javascript'>document.write(karutaStr[LANG]['loading'])</script></h4></div>
+							</div>
+						</div>
+					</div>
+					<!-- ================================================================== -->
+					<div class="tab-pane" id="experiencespro_histo">
+						<div class='row-fluid'>
+							<div class="span12">
+								<div id="experiences-detail_histo"><h4><img src='../../karuta/img/ajax-loader.gif'/> <script language = 'javascript'>document.write(karutaStr[LANG]['loading'])</script></h4></div>
+								<div id="stages-detail_histo"><h4><img src='../../karuta/img/ajax-loader.gif'/> <script language = 'javascript'>document.write(karutaStr[LANG]['loading'])</script></h4></div>
+								<div id="alternances-detail_histo"><h4><img src='../../karuta/img/ajax-loader.gif'/> <script language = 'javascript'>document.write(karutaStr[LANG]['loading'])</script></h4></div>
+								<div id="projets-detail_histo"><h4><img src='../../karuta/img/ajax-loader.gif'/> <script language = 'javascript'>document.write(karutaStr[LANG]['loading'])</script></h4></div>
+							</div>
+						</div>
+					</div>
+					<!-- ================================================================== -->
+					<div class="tab-pane" id="experiencesperso_histo">
+						<div class='row-fluid'>
+							<div class="span12">
+								<div id="exp-persos-detail_histo"><h4><img src='../../karuta/img/ajax-loader.gif'><script language = 'javascript'>document.write(karutaStr[LANG]['loading'])</script></h4></div>
+							</div>
+						</div>
+					</div>
+					<!-- ================================================================== -->
+					<div class="tab-pane" id="langues_histo">
+						<div class='row-fluid'>
+							<div class="span12">
+								<div id="langues-detail_histo"><h4><img src='../../karuta/img/ajax-loader.gif'><script language = 'javascript'>document.write(karutaStr[LANG]['loading'])</script></h4></div>
+							</div>
+						</div>
+					</div>
+					<!-- ================================================================== -->
+				</div>
+			</div>
+		</div>
+		<!-- ==================================================================================================== -->
+		<!-- ==================================================================================================== -->
+		<!-- ======================================= COMPETENCE ================================================= -->
+		<!-- ==================================================================================================== -->
+		<!-- ==================================================================================================== -->
+		<div id='competence' name='page' class='hide'>
+			<ol class="breadcrumb">
+				<li><a id='accueil' href="#" onclick="show_view('accueil');">Accueil</a><span class="divider">/</span></li>
+				<li class="active">Mon e-portfolio<span class="divider">/</span></li>
+				<li class="active">Mon bilan<span class="divider">/</span></li>
+				<li id='view_label_comp' class="active"></li>
+			</ol>
+	
+			<h3 class="align-left"><i class="fa fa-suitcase"></i> MON BILAN<span id='help-bilan-label'></span></h3>
+	
+			<!-- ====================================================================== -->
+			<div id="portfolio_comp">
+				<ul id="tabs_comp" class="nav nav-tabs" data-tabs="tabs">
+					<li><a href="#resume_comp" data-toggle="tab" onclick="$('#view_label_comp').html(view_label['resume']);" class="text-noir">Vue d'ensemble</a></li>
+					<li><a href="#metiers_comp" data-toggle="tab" onclick="$('#view_label_comp').html(view_label['metiers']);" class="text-vert">Compétences métiers</a></li>
+					<li><a href="#autres1_comp" data-toggle="tab" onclick="$('#view_label_comp').html(view_label['transinnov']);" class="text-bleu">Compétences transversales</a></li>
+					<li><a href="#autres2_comp" data-toggle="tab" onclick="$('#view_label_comp').html(view_label['autresperso']);" class="text-violet">Autres compétences personnelles</a></li>
+					<li><a href="#langues_comp" data-toggle="tab" onclick="$('#view_label_comp').html(view_label['langues']);" class="text-gris">Langues</a></li>
+				</ul>
+	
+				<div id="tab-content_comp" class="tab-content">
+					<!-- ================================================================== -->
+					<div class="tab-pane" id="resume_comp">
+						<div class="container">
+							<div class='row-fluid'>
+								<div class="span6">
+									<div class="alert alert-vert alert-block">
+										<h3 align="center">Compétences par grands domaines métiers<span id='help-bilan-1'></span></h3>
+										<div id="metiers-short_comp"><h4><img src='../../karuta/img/ajax-loader.gif'/><script language = 'javascript'>document.write(karutaStr[LANG]['loading'])</script></h4></div>
+									</div>
+								</div>
+								<div class="span6">
+									<div class="alert alert-block alert-bleu">
+										<h3 align="center">Compétences transversales<span id='help-bilan-2'></span></h3>
+										<div id="autres-short1_comp"><h4><img src='../../karuta/img/ajax-loader.gif'/><script language = 'javascript'>document.write(karutaStr[LANG]['loading'])</script></h4></div>
+									</div>
+									<div class="alert alert-block alert-violet">
+										<h3 align="center">Autres compétences personnelles<span id='help-bilan-3'></span></h3>
+										<div id="autres-short2_comp"><h4><img src='../../karuta/img/ajax-loader.gif'/><script language = 'javascript'>document.write(karutaStr[LANG]['loading'])</script></h4></div>
+									</div>
+									<div class="alert alert-block alert-gris">
+										<h3 align="center">Langues étrangères<span id='help-bilan-4'></span></h3>
+									<div id="langues-short_comp"><h4><img src='../../karuta/img/ajax-loader.gif'/> <script language = 'javascript'>document.write(karutaStr[LANG]['loading'])</script></h4></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ================================================================== -->
+					<div class="tab-pane" id="metiers_comp">
+						<div class='row-fluid'>
+							<div class="span12">
+								<div class='titre1'>Mes compétences métiers<span id='help-comp-metier-label'></span></div>
+								<div class="alert alert-vert alert-block">
+									<div id="metiers-detail_comp"><h4><img src='../../karuta/img/ajax-loader.gif'/><script language = 'javascript'>document.write(karutaStr[LANG]['loading'])</script></h4></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ================================================================== -->
+					<div class="tab-pane" id="autres1_comp">
+						<div class='row-fluid'>
+							<div class="span12">
+								<div class='titre1'>Mes compétences transversales<span id='help-comp-trans-label'></span></div>
+								<div class="alert alert-bleu alert-block">
+									<div id="autres-detail1_comp"><h4><img src='../../karuta/img/ajax-loader.gif'/><script language = 'javascript'>document.write(karutaStr[LANG]['loading'])</script></h4></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ================================================================== -->
+					<div class="tab-pane" id="autres2_comp">
+						<div class='row-fluid'>
+							<div class="span12">
+								<div class='titre1'>Mes autres compétences personnelles<span id='help-comp-perso-label'></span></div>
+								<div class="alert alert-violet alert-block">
+									<div id="autres-detail2_comp"><h4><img src='../../karuta/img/ajax-loader.gif'/><script language = 'javascript'>document.write(karutaStr[LANG]['loading'])</script></h4></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ================================================================== -->
+					<div class="tab-pane" id="langues_comp">
+						<div class='row-fluid'>
+							<div class="span12">
+								<div class='titre1'>Mes langues maternelle et etrangères<span id='help-langues2-label'></span></div>
+								<div id="langues-detail_comp"><h4><img src='../../karuta/img/ajax-loader.gif'><script language = 'javascript'>document.write(karutaStr[LANG]['loading'])</script></h4></div>
+							</div>
+						</div>
+					</div>
+					<!-- ================================================================== -->
+				</div>
+			</div>
+		</div>
+		<!-- ==================================================================================================== -->
+		<!-- ==================================================================================================== -->
+		<!-- ======================================= PROJET ===================================================== -->
+		<!-- ==================================================================================================== -->
+		<!-- ==================================================================================================== -->
+		<div id='projet' name='page' class='hide'>
+			<ol class="breadcrumb">
+				<li><a id='accueil' href="#" onclick="show_view('accueil');">Accueil</a><span class="divider">/</span></li>
+				<li class="active">Mon e-portfolio<span class="divider">/</span></li>
+				<li class="active">Mon projet<span class="divider">/</span></li>
+				<li id='view_label_projet' class="active"></li>
+			</ol>
+	
+			<h3 class="align-left"><i class="fa fa-rocket"></i> MON PROJET<span id='help-projet-label'></span></h3>
+	
+			<!-- ====================================================================== -->
+			<div id="portfolio_projet">
+				<ul id="tabs_projet" class="nav nav-tabs" data-tabs="tabs">
+					<li><a href="#description_projet" data-toggle="tab" onclick="$('#view_label_projet').html(view_label['description']);" class="text-noir">Ma description</a></li>
+					<li><a href="#competence_projet" data-toggle="tab" onclick="$('#view_label_projet').html(view_label['competence']);" class="text-vert">Mes compétences préférées</a></li>
+					<li id='metiers1'><a href="#metier_projet" data-toggle="tab" onclick="$('#view_label_projet').html(view_label['metier']);" class="text-bleu">Mon métier</a></li>
+				</ul>
+	
+				<div id="tab-content_projet" class="tab-content">
+					<!-- ================================================================== -->
+					<div class="tab-pane" id="description_projet">
+						<div class='row-fluid'>
+							<div class="span12">
+								<div class='titre1'>Mon projet personnel professionnel<span id='help-projet-desc-label'></span></div>
+								<div class="alert alert-noir alert-block">
+									<div id="description_detail_projet"><h4><img src='../../karuta/img/ajax-loader.gif'/><script language = 'javascript'>document.write(karutaStr[LANG]['loading'])</script></h4></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ================================================================== -->
+					<div class="tab-pane" id="competence_projet">
+						<div class="container">
+							<div class='row-fluid'>
+								<div class='titre1'>Mes compétences préférées<span id='help-projet-comp-label'></span></div>
+								<div class="span5">
+									<div class="alert alert-vert alert-block">
+										<a style='display:none' id='menu-add-projet-comp-0' class='btn btn-mini btn-vert editbutton' onclick='javascript:UIFactory.MonProjet.addCompetenceMetier()'>Ajouter des compétences</a>
+										<h3 align="center">Compétences métiers</h3>
+										<div id="projet_metiers"></div>
+									</div>
+								</div>
+								<div class="span5">
+									<div class="alert alert-block alert-bleu">
+										<a style='display:none' id='menu-add-projet-comp-1' class='btn btn-mini btn-bleu editbutton' onclick='javascript:UIFactory.MonProjet.addCompetenceTrans()'>Ajouter des compétences</a>
+										<h3 align="center">Compétences transversales</h3>
+										<div id="projet_trans"></div>
+									</div>
+									<div class="alert alert-block alert-violet">
+										<a style='display:none' id='menu-add-projet-comp-2' class='btn btn-mini btn-violet editbutton' onclick='javascript:UIFactory.MonProjet.addCompetenceAutres()'>Ajouter des compétences</a>
+										<h3 align="center">Autres compétences personnelles</h3>
+										<div id="projet_autres"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ================================================================== -->
+					<div class="tab-pane" id="metier_projet">
+						<div class='row-fluid'>
+							<div class="span7">
+								<div class='titre1'>Ressources métiers<span id='help-projet-metier-label'></span></div>
+								<div id='metier_projet_ss_titre'>
+									Notre Centre de Compétences et des Métiers met à votre disposition sur le site de l’IUT2 une carte des métiers préparés par les formations de ses différents départements.
+								</div>
+								<p>
+									1) Rendez-vous sur <a id='carte_metiers_url' href='' target='_blank'><span id='carte_metiers_label'></span></a> dans la rubrique <b>MÉTIERS</b> et cliquez sur le lien <b>Liste non exhaustive de nos métiers...</b>
+								</p>
+								<p>
+									2) Parcourez les domaines métiers et trouvez les fiches métiers qui vous intéressent.
+								</p>
+								<p>
+									3) Comparez vos compétences préférées à celles attendues par le métier que vous visez, explorez les formations conseillées et les évolutions possibles pour construire votre parcours. 
+								</p>
+								<div class='alert alert-block alert-vert'>
+									<div id='metier_projet_exploration_ss_titre'>Explorez encore plus de possibles !</div>
+									<p>
+										N’hésitez pas à parcourir les fiches métiers de Pôle Emploi qui contiennent tous les fiches  du ROME (Répertoire Opérationnel des Métiers et des Emplois).  Dans la rubrique Mon environnement pro de ce ePortfolio vous pouvez accéder, après un test en ligne à une carte des métiers et des emplois possibles proches de votre spectre personnel professionnel.
+									</p>
+								</div>
+							</div>
+							<div class="span5">
+								<img src='../img/carte-des-metiers.jpg'/>
+							</div>
+						</div>
+					</div>
+					<!-- ================================================================== -->
+				</div>
+			</div>
+		</div>
+		<!-- ==================================================================================================== -->
+		<!-- ==================================================================================================== -->
+		<!-- ======================================= CV ========================================================= -->
+		<!-- ==================================================================================================== -->
+		<!-- ==================================================================================================== -->
+		<div id='cv' name='page' class='hide'>
+			<ol class="breadcrumb">
+				<li><a id='accueil' href="#" onclick="show_view('accueil');">Accueil</a><span class="divider">/</span></li>
+				<li class="active">Mes cvs<span class="divider">/</span></li>
+				<li id='view_label_cv' class="active"></li>
+			</ol>
+	
+			<h3 class="align-left"><i class="fa fa-star"></i> MA VALORISATION</h3>
+	
+			<!-- ====================================================================== -->
+			<div id="portfolio_cv">
+				<!-- ================================================================== -->
+				<ul id="tabs_cv" class="nav nav-tabs" data-tabs="tabs">
+					<li><a href="#list_cv" data-toggle="tab" onclick="$('#view_label_cv').html(view_label['list_cv']);" class="text-noir">Lister les cvs</a></li>
+					<li><a href="#create_cv" data-toggle="tab" onclick="$('#view_label_cv').html(view_label['create_cv']);" class="text-vert">Créer un cv</a></li>
+					<li><a href="#carte_cv" data-toggle="tab" onclick="$('#view_label_cv').html(view_label['carte']);loadBubbleTreeMap();" class="text-vert">Ma carte</a></li>
+				</ul>
+				<div id="tab-content_cv" class="tab-content">
+					<div class="tab-pane" id="list_cv">
+						<div class='row-fluid'>
+							<div class="span12">
+								<div id="list_cvs_short"><h4><img src='../../karuta/img/ajax-loader.gif'><script language = 'javascript'>document.write(karutaStr[LANG]['loading'])</script></h4></div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" id="create_cv">
+						<div class='row-fluid'>
+							<div class="span12">
+								<div id="list_cvs_detail"><h4><img src='../../karuta/img/ajax-loader.gif'><script language = 'javascript'>document.write(karutaStr[LANG]['loading'])</script></h4></div>
+							</div>
+						</div>
+					</div>
+					<!-- ================================================================== -->
+					<div class="tab-pane" id="carte_cv">
+						<div class='row'>
+							<div class="span12">
+								<div id='mode-emploi-button' class='badge' onclick='$("#carte_detail_projet").html(UICom.structure["ui"][helps_bycode["help-projet-mode-emploi"].id].resource.getView())'>Mode d'emploi</div>								
+								<div class='titre1'>Ma carte de profil<span id='help-projet-carte-label'></span></div>
+								<div class="alert alert-vert alert-block">
+									<div class='row'>
+										<div class='span6'>
+											<iframe id="bubble_iframe" src='bubble.html'></iframe>
+											<div id='carte-info'>Partager ma carte par <a id='carte-link'  href='' target='_blank'>lien web</a> ou par <span id='qrcode-link' onclick="$('#qrcode-window').modal('show')">Qr-code</span> <span id='help-carte-partage'></span></div>
+											<!--div id='qrcode_url' class="input-append">
+  												<input id='url-to-copy' type="text" readonly="" aria-label="" value="" class="span5">
+ 												<button id='copy-button' type="button" data-clipboard-text="" title="Cliquer pour copier l'url de la carte" class="js-zeroclipboard btn"><svg width="14" viewBox="0 0 14 16" version="1.1" height="16" class="octicon octicon-clippy" aria-hidden="true"><path d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg></button>
+											</div-->
+										</div>							
+										<div class='span5'>
+											<div id="carte_detail_projet">
+											<h4 id='carte-welcome'>Valorisez votre profil par une carte personnelle interactive! que vous pourrez partager sur vos réseaux sociaux, votre CV...</h4> 
+											</div>
+										</div>							
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ==================================================================================================== -->
+		<!-- ==================================================================================================== -->
+		<!-- ======================================= SUIVI ====================================================== -->
+		<!-- ==================================================================================================== -->
+		<!-- ==================================================================================================== -->
+		<div id='suivi' name='page' class='hide'>
+			<ol class="breadcrumb">
+				<li><a id='accueil' href="#" onclick="show_view('accueil');">Accueil</a><span class="divider">/</span></li>
+				<li id='view_label' class="active">Mon suivi</li>
+			</ol>
+	
+			<h3 class="align-left"><i class="fa fa-question"></i> MON SUIVI</h3>
+	
+			<!-- ====================================================================== -->
+			<div id="feedback-section">
+	
+							<blockquote>Votre superviseur est précisé ci-dessous. Vous pouvez lui envoyer une demande de feedback concernant 
+							votre activité sur votre e-portfolio ou vos CV. L'histoire de vos demandes / réponses s'affiche 
+							dans la colonne de droite. Merci de ne pas envoyer de nouvelle demande tant qu'une demande en cours n'a pas reçu de réponse.</blockquote>
+				<div class='row'>
+					<div class='span6'>
+						<h4>Mon superviseur</h4>
+						<div class='supervisor'>
+							<div class='row ligne1'>
+								<div class='span2 supervisor-titles'>Nom</div>
+								<div class='span2 supervisor-titles'>Prénom</div>					
+							</div>
+							<div class='row ligne2'>
+								<div id='supervisor-lastname' class='span2'></div>
+								<div id='supervisor-firstname' class='span2'></div>
+							</div>
+						</div>
+						<h4>Demande de feedback</h4>
+						<div id='demande'></div>
+					</div>
+					<div class='span1'></div>
+					<div class='span5'>
+						<h4>Mes demandes de feedback</h4>
+						<div id='feedbacks'>
+						</div>
+					</div>
+				
+				</div>
+			</div>
+		</div>
+		<!-- ==================================================================================================== -->
+		<!-- ==================================================================================================== -->
+	</div>
+	<!-- ====================================================================== -->
+<footer id="main-footer"></footer>
+				<!-- ====================================================================== -->
+	<!-- ==================== activite box ==================================== -->
+	<div id='activite-window' class='modal hide fade alert alert-block'>
+		<div id='activite-window-header' class='modal-header' style='text-align:right'></div>
+		<div id='activite-window-body' class='modal-body'></div>
+	</div>
+	<!-- ==================== alert box ==================================== -->
+	<div id='alert-window' class='modal hide fade alert alert-block'>
+		<div id='alert-window-header' class='modal-header' style='text-align:right'></div>
+		<div id='alert-window-body' class='modal-body'></div>
+		<div id='alert-window-footer' class='modal-footer'></div>
+	</div>
+	<!-- ==================== langue box ==================================== -->
+	<div id='langue-window' class='modal hide fade'>
+		<div id='langue-window-header' class='modal-header'></div>
+		<div id='langue-window-body' class='modal-body'></div>
+		<div id='langue-window-footer' class='modal-footer'><span class='btn' onclick="$('#langue-window').modal('hide')">Fermer</span></div>
+	</div>
+	<!-- ==================== info box ====================================== -->
+	<div id='info-window' class='modal' style='height:100px;'>
+		<div id='info-window-body' class='modal-body' style='text-align:center;'>Chargement du portfolio</div>
+		<div id="info-spin"></div>
+	</div>
+	<!-- ==================== qrcode ====================================== -->
+	<div id='qrcode-window' class='modal hide fade' style='height:200px;width:200px'>
+		<div id='qrcode-window-header' class='modal-header'>Votre Qr-Code</div>
+		<div id='qrcode-window-body' class='modal-body' style='text-align:center'>
+			<canvas width='100' height='100' id='qrcode-carte'></canvas>
+		</div>
+		<div id='qrcode-window-window-footer' class='modal-footer'><span class='btn' onclick="$('#qrcode-window').modal('hide')">Fermer</span></div>
+	</div>
+	<!-- ================================================================== -->
+
+	<script>document.write(MessageBox());</script>
+	<script>document.write(addedBox());</script>
+	<script>document.write(EditBox());</script>
+	<script>document.write(DeleteBox());</script>
+	<script>document.write(savedBox());</script>
+	<script>document.write(formulaireBox());</script>
+	<script language='javascript'>
+	
+	var usercode = getURLParameter('code');
+	var g_portfolioid = "";
+	var g_profileid = "";
+	var g_cvid = "";
+	var g_projetid = "";
+	var g_projet_current = "";
+	var l_userrole = 'etudiant';
+	var g_carte_url = "";
+	var g_projetcode = "";
+	var g_profilecode = "";
+	var g_cvcode = "";
+	var g_qrcode_cv_nodeid = "";
+	
+	var g_display_type = null; // pour formulaire stage
+	var g_edit = null; // pour formulaire stage
+
+	var htmlShort1 = "";
+	var g_htmlDetail1 = "";
+	var htmlShort2 = "";
+	var g_htmlDetail2 = "";
+	var htmlShort3 = "";
+	var g_htmlDetail3 = "";
+	var g_mother_tongueid = "";
+	var g_htmlDetail4 = "";
+	var g_competence_cv_metier_nodeid = "";
+	var g_competence_cv_trans_nodeid = "";
+	var g_competence_cv_autres_nodeid = "";
+	//-----------------
+	var g_ppn_domaines = {};
+	var g_domaines = {};
+
+
+
+	//====================================
+	//====================================
+	//====================================
+
+	$(window).load(function() {
+		$("#main-footer").html(getFooter());
+//		$('iframe').iframeAutoHeight({debug: true});
+		$("#wait-spin").spin();
+		$("#info-spin").spin({top:'60%'});
+		$("#spin-add").spin({top:'60%'});
+		show_view('accueil');
+		//----------------
+		fetchPPNmetier();
+		if (applitype=="FTLV")
+			$("#lien-suppression").append("Pour supprimer votre portfolio cliquez sur le lien ci-contre. <a id='supprimerPortfolios' href='#' onclick='javascritp:confirmDelFTLV()'>SUPPRIMER <img width='20px' src='../img/icons8-delete-50.png'/></a>");
+		$.ajax({
+			type : "GET",
+			dataType : "xml",
+			url : "../../../"+serverBCK+"/credential",
+			data: "",
+			success : function(data) {
+				USER = new UIFactory["User"]($("user",data));
+				Users_byid[USER.id] = USER;			
+				loadLanguages();
+				var urlS = "../../../"+serverBCK+"/portfolios?active=1";
+				if (usercode!=null && usercode!="")
+					urlS += "&search="+usercode;
+				$.ajax({
+					Accept: "application/xml",
+					contentType: "application/xml",
+					type : "GET",
+					dataType : "xml",
+					url : urlS,
+					success : function(data) {
+						selectPortfolio(data,usercode);
+						$.ajax({
+							type : "GET",
+							dataType : "xml",
+							url : "../../../"+serverBCK+"/portfolios/portfolio/code/IUT2referentiels.help?resources=true",
+							success : function(data) {
+								UICom.parseStructure(data);
+								UIFactory["Help"].parse(data);
+								UIFactory["Help"].displayAll();
+							}
+						});
+					}
+				});
+				fetchDomaineMetier();
+				if (carte_metiers_url!="") {
+					$("#carte_metiers_url").attr('href',carte_metiers_url);
+					$("#carte_metiers_label").html(carte_metiers_url);
+				} else {
+					$("#metiers1").hide();
+					$("#metier_projet").hide();
+				}
+			},
+			error : function(jqxhr,textStatus) {
+				loadLanguages(function(data) {alert(karutaStr[LANG]['not-logged']);});
+				window.location="../..";
+			}
+		});
+		//----------------
+	});
+	
+	//====================================
+	//====================================
+	//====================================
+
+	
+	</script>
+	
+</body>
+</html>

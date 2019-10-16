@@ -1,0 +1,216 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="../../application/img/faviconK.png"></link>
+    <title>Eportfolio - Tout au Long de la Vie</title>
+	<!-- =========================================== -->
+	<link rel="stylesheet" type="text/css" href="../../other/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../other/css/bootstrap-responsive.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../other/css/bootstrap-wysihtml5.css" />
+	<link rel="stylesheet" type="text/css" href="../../other/css/jquery-ui.css" />
+	<link rel="stylesheet" type="text/css" href="../../other/css/font-awesome/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../other/pick-a-color/css/pick-a-color-1.1.8.min.css" />
+	<link rel="stylesheet" type="text/css" href="../css/specific.css" />
+	<!-- =========================================== -->
+	<script src="../../application/_init.js"></script>
+	<!-- =========================================== -->
+	<script src="../../other/js/jquery-1.10.2.js"></script>
+	<script src="../../other/js/jquery-ui-1.10.3.custom.min.js"></script>
+	<script src="../../other/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../../other/js/jquery.fileupload.js"></script>
+	<script src="../js/specific.js"></script>
+	<script src="../js/ftlv.js"></script>
+	<script src="../../karuta/js/karuta.js"></script>
+	<script src="../../karuta/js/model/Type_User.js"></script>
+	<script src="../../karuta/js/languages/locale_fr.js"></script>
+
+	<style>
+		header {
+			background-color:black;
+			height:20px;
+		}
+		footer {
+			background-color:black;
+			height:80px;
+			padding-top:20px;
+		}
+		#display {
+		margin-top:50px;
+		margin-bottom:50px;
+		padding:20px;
+		background-color:#e4f7fe;
+		border: 2px solid #0099cc;
+		}
+		
+		#connexion-img, #firefox, #support, #help {
+			width:60px;
+		}
+		button {
+			background-color:black;
+			border-radius:0px;
+			color:white;
+			height:40px;
+			padding-left:20px;
+			padding-right:20px;
+			border: 1px solid black;
+			margin-right:4px;
+		}
+		.creer-importer-button {
+			border-radius:0px;
+			height:40px;
+			border: 2px solid #0099cc;
+			margin-bottom: 0px;
+			margin-right:4px;
+			background-color:#4acfd9;
+		}
+		#useridentifier, #password,#firstname, #lastname {
+			border-radius:0px;
+			height:40px;
+			border: 2px solid #0099cc;
+			margin-bottom: 0px;
+			width: 160px;
+			margin-right:4px;
+		}
+		#fsh {
+			margin-top:30px;
+			margin-bottom:30px;
+			text-align:center;
+		}
+		
+		a {
+			color:#53b9d2;
+		}
+		p {
+			padding:10px;
+		}
+		#logo1 {
+			margin-top:50px;
+			width:150px;
+		}
+		#logo2 {
+			margin-left:50px;
+			margin-top:50px;
+			width:300px;
+		}
+		.libelle {
+			display: inline-block;
+			width:70px;
+		}
+		#register-button{
+		margin-left:75px;
+		}
+		#img-accueil{
+		margin-top:50px;}
+		h4 {
+		font-size:200%;
+		line-height:120%;
+		}
+		#h4-2 {
+			color: #bb317a;
+		}
+	</style>
+</head>
+
+<body>
+	<header></header>
+	<div id='accueil' class="container">
+		<div class='row-fluid'>
+			<div class="span6">
+				<img class='img-responsive' id='logo1' src='../img/logo-uga.png'/>
+				<img class='img-responsive' id='logo2' src='../img/logo-kiut-portfolio.png'/>
+				<div id='img-accueil' class='row-fluid'>
+					<div class="span6">
+						<img src='../img/personnage-accueil-kftlv.png'/>
+					</div>
+			<!-- ================================================================== -->
+					<div class='span6'>
+						<h4 id='h4-1'>Plate-forme KIUT Portfolio pour la</h4>
+						<h4 id='h4-2'>Formation Tout au Long de la Vie </h4>
+					</div>
+				</div>
+				<p>
+					Cette plateforme est développée par le milieu universitaire et grâce à un partenariat
+					 franco-canadien entre l'IUT2 Grenoble et HEC Montréal 
+					 avec la solution <span id='osk'>Open Source KARUTA</span>
+				</p>
+			</div>
+			<!-- ================================================================== -->
+			<div class='span6'>
+				<div id='display'>
+				</div>
+				<div id='fsh' class='row-fluid'>
+					<div class='span4'>
+						<img id='firefox' src='../img/firefox.png'/>
+						<p>Optimisé pour Firefox&nbsp;!<br/>Évitez Internet Explorer&nbsp;!</p>
+					</div>
+					<div class='span4'>
+						<img id='support' src='../img/support.png'/>
+						<p> Votre compte ne fonctionne pas ?<br/><a href='https://goo.gl/forms/FhBdi3VlvQIiPM6J2'>Nous contacter</a></p>
+					</div>
+					<div class='span4'>
+						<img id='help' src='../img/help.png'/>
+						<p><a href='https://docs.google.com/document/d/1qhi7Uf_ZMsJpDNzfdvvy-Ii_bt4ztaBUansbjNQxumQ/edit'>Afficher le <span id='guide'>guide</span> d'utilisation du portfolio</a></p>
+					</div>
+				</div>
+				<div id='lien-export'>Pour supprimer votre compte cliquer sur le lien ci-contre <a id='delUser' onclick='displayConnectionDelete()' href='#'> SUPPRIMER  <img width='20px' src='../img/picto-trash-bleue.png'/></a></div>
+				
+			</div>
+		</div>
+	</div><!-- /container -->
+	
+		<!-- ==================== alert box ==================================== -->
+	<div id='alert-window' class='modal hide fade alert alert-block'>
+		<div id='alert-window-header' class='modal-header' style='text-align:right'></div>
+		<div id='alert-window-body' class='modal-body'></div>
+		<div id='alert-window-footer' class='modal-footer'></div>
+	</div>
+	
+<!-- ==================== Delete box ==================== -->
+<div id='delete-window' class='modal fade'>
+		<div class='modal-dialog'>
+			<div class='modal-content'>
+				<div class='modal-header'>
+					<div id='edit-window-type' style='float:right'></div>
+					<h3 id='edit-window-title' >Attention</h3>
+				</div>
+				<div id='delete-window-body' class='modal-body'>
+					<div id='delete-window-body-content'>
+					</div>
+				</div>
+				<div class='modal-footer' id='delete-window-footer'></div>
+			</div>
+		</div>
+</div>
+<!-- ============================================== -->
+	
+		<footer id='main-footer'>
+		</footer>
+
+	<script>
+		//------------------------------
+		$(document).ready(function() {
+			if (cas_url!="")
+				$("#connexion-cas").show();
+			$("#main-footer").html(getFooter());
+			$.ajax({
+				type : "POST",
+				dataType : "xml",
+				url : "../../../../"+serverBCK+"/credential/logout",
+				data: ""
+			});
+			displayConnection();
+			$('#password').keypress(function(e) {
+				var code= (e.keyCode ? e.keyCode : e.which);
+				if (code == 13)
+					callSubmit();
+			});
+		});
+		//------------------------------
+	</script>
+
+</body>
+
+</html>

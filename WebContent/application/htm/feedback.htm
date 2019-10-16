@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Eportfolio 4 &eacute;toiles - Mon superviseur</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+	<!-- =========================================== -->
+	<link rel="stylesheet" type="text/css" href="../../other/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../other/css/bootstrap-responsive.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../other/css/bootstrap-wysihtml5.css" />
+	<link rel="stylesheet" type="text/css" href="../../other/css/jquery-ui.css" />
+	<link rel="stylesheet" type="text/css" href="../../other/css/font-awesome/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../karuta/css/karuta.css" />
+	<link rel="stylesheet" type="text/css" href="../../karuta/css/welcome.css"/>
+	<!-- =========================================== -->
+	<script src="../../other/js/jquery-1.10.2.js"></script>
+	<script src="../../other/js/jquery-ui-1.10.3.custom.min.js"></script>
+	<script src="../../other/bootstrap/js/bootstrap.min.js"></script>
+	<script src='../../other/wysihtml5/wysihtml5-0.3.0.js'> </script>
+	<script src='../../other/wysihtml5/parser.js'> </script>
+	<!--[if lt IE 9]>
+		<script src='http://html5shiv.googlecode.com/svn/trunk/html5.js'></script>
+	<![endif]-->
+	<script src="../../other/js/bootstrap-wysihtml5.js"></script>
+	<script src="../../other/js/jquery_hotkeys.js"></script>
+	<!--script src="../../other/js/bootstrap-wysiwyg.js"></script-->
+	<!-- =============================================================== -->
+	<script src="../../karuta/js/karuta.js"></script>
+	<script src="../../karuta/js/UICom.js"></script>
+	<!-- =============================================================== -->
+	<script src="../../karuta/js/model/Type_Portfolio.js"></script>
+	<script src="../../karuta/js/model/Type_Node.js"></script>
+	<script src="../../karuta/js/model/Type_User.js"></script>
+	<script src="../../karuta/js/UICom.js"></script>
+	<!-- =============================================================== -->
+	<link type="text/css" href="../../other/lightbox/css/lightbox.css" rel="stylesheet" />
+	<script src="../../other/lightbox/js/lightbox-2.6.min.js"></script>
+	<!-- =============================================================== -->
+	<link type="text/css" href="../../other/jplayer/jplayer.blue.monday.css" rel="stylesheet" />
+	<script src="../../other/jplayer/jquery.jplayer.min.js"></script>
+	<!-- =============================================================== -->
+	<script src="../../other/js/jquery.ui.widget.js"></script>
+	<script src="../../other/js/jquery.iframe-transport.js"></script>
+	<script src="../../other/js/jquery.fileupload.js"></script>
+	<!-- =============================================================== -->
+	<script src="../../other/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+	<script src="../../other/bootstrap-datepicker/bootstrap-datepicker.fr.js"></script>
+	<link rel="stylesheet" href="../../other/bootstrap-datepicker/datepicker.css" />
+	<!-- =============================================================== -->
+	<script src="../../karuta/js/resources/Type_Calendar.js"></script>
+	<script src="../../karuta/js/resources/Type_Comments.js"></script>
+	<script src="../../karuta/js/resources/Type_Document.js"></script>
+	<script src="../../karuta/js/resources/Type_Proxy.js"></script>
+	<script src="../../karuta/js/resources/Type_TextField.js"></script>
+	<script src="../../karuta/js/resources/Type_Field.js"></script>
+	<script src="../../karuta/js/resources/Type_Image.js"></script>
+	<script src="../../karuta/js/resources/Type_Get_Resource.js"></script>
+	<script src="../../karuta/js/resources/Type_Get_Get_Resource.js"></script>
+	<script src="../../karuta/js/resources/Type_URL.js"></script>
+	<script src="../../karuta/js/resources/Type_Item.js"></script>
+	<script src="../../karuta/js/resources/Type_Video.js"></script>
+	<script src="../../karuta/js/resources/Type_CompetencyEvaluation.js"></script>
+	<!-- =============================================================== -->
+	<script src="../../application/_init.js"></script>
+	<!-- =============================================================== -->
+	<script src="../../karuta/js/version.js"></script>
+	<!-- =============================================================== -->
+	<script src="../../karuta/js/languages/locale_fr.js"></script>
+	<!-- =============================================================== -->
+	<script src="../js/iut2.js"></script>
+	<script src="../js/profile.js"></script>
+	<script src="../js/feedback.js"></script>
+	<!-- =============================================================== -->
+	<link rel="stylesheet" href="../css/specific.css" />
+	<!-- =============================================================== -->
+	
+</head>
+<body>
+	<div id="container" class="container">
+
+		<div id="navbar" class="navbar navbar-fixed-top"></div>
+
+		<ol class="breadcrumb">
+			<li><a href="#">Accueil</a><span class="divider">/</span></li>
+				<li id='view_label' class="active">Mon suivi</li>
+		</ol>
+
+		<h3 class="align-left"><i class="fa fa-tasks"></i> MON SUIVI</h3>
+
+		<!-- ====================================================================== -->
+		<div id="feedback-section">
+
+						<blockquote>Votre superviseur est précisé ci-dessous. Vous pouvez lui envoyer une demande de feedback concernant 
+						votre activité sur votre e-portfolio ou vos CV. L'historique de vos demandes / réponses s'affiche 
+						dans la colonne de droite. Merci de ne pas envoyer de nouvelle demande tant qu'une demande en cours n'a pas reçu de réponse.</blockquote>
+			<div class='row'>
+				<div class='span6'>
+					<h4>Mon superviseur</h4>
+					<div class='supervisor'>
+						<div class='row ligne1'>
+							<div class='span2 supervisor-titles'>Nom</div>
+							<div class='span2 supervisor-titles'>Prénom</div>					
+						</div>
+						<div class='row ligne2'>
+							<div id='supervisor-lastname' class='span2'></div>
+							<div id='supervisor-firstname' class='span2'></div>
+						</div>
+					</div>
+					<h4>Demande de feedback</h4>
+					<div id='demande'></div>
+				</div>
+				<div class='span1'></div>
+				<div class='span5'>
+					<h4>Mes demandes de feedback</h4>
+					<div id='feedbacks'>
+					</div>
+				</div>
+			
+			</div>
+		</div>
+	</div>
+	<!-- ====================================================================== -->
+	<div id="footer" class="container-fluid" ></div>
+	<!-- ====================================================================== -->
+	
+	<!-- ==================== activite box ==================================== -->
+	<div id='activite-window' class='modal hide fade alert alert-block'>
+		<div id='activite-window-header' class='modal-header' style='text-align:right'></div>
+		<div id='activite-window-body' class='modal-body'></div>
+	</div>
+	<!-- ====================================================================== -->
+	
+	<script>document.write(EditBox());</script>
+	<script>document.write(DeleteBox());</script>
+	<script>document.write(savedBox());</script>
+	<script language='javascript'>
+		var portfolioid = getURLParameter('portfolioid');
+		var supervisor_email = "";
+		var l_userrole = 'etudiant';
+
+		$(document).ready(function() {
+			$("#footer").html(footer);
+			$.ajaxSetup({async: false});
+			//----------------
+			$.ajax({
+				type : "GET",
+				dataType : "xml",
+				url : "../../../"+serverBCK+"/credential",
+				data: "",
+				success : function(data) {
+					USER = new UIFactory["User"]($("user",data));
+					//----------------
+					$.ajax({ // get group-role for the user
+						Accept: "application/xml",
+						type : "GET",
+						dataType : "xml",
+						url : "../../../"+serverBCK+"/credential/group/" + portfolioid,
+						success : function(data) {
+							var usergroups = $("group",data);
+							g_userrole = $("role",usergroups[0]).text();
+						}
+					});
+					//----------------
+					$.ajax({
+						type : "GET",
+						dataType : "xml",
+						url : "../../../"+serverBCK+"/portfolios/portfolio/" + portfolioid + "?resources=true",
+						success : function(data) {
+							UICom.parseStructure(data);
+							UIFactory["Profile"].parse(proxies_data['proxy-profile']);
+							var supervisor_lastname_nodeid = $("asmContext:has(metadata[semantictag='supervisor_lastname'])",data).attr('id');
+							var supervisor_firstname_nodeid = $("asmContext:has(metadata[semantictag='supervisor_firstname'])",data).attr('id');
+							var supervisor_email_nodeid = $("asmContext:has(metadata[semantictag='supervisor_email'])",data).attr('id');
+							supervisor_email = UICom.structure["ui"][supervisor_email_nodeid].resource.getView();
+							$("#supervisor-lastname").html(UICom.structure["ui"][supervisor_lastname_nodeid].resource.getView());
+							$("#supervisor-firstname").html(UICom.structure["ui"][supervisor_firstname_nodeid].resource.getView());
+							//--------------------
+							UIFactory["Feedback"].parse(data);
+							var parentid = $("asmUnitStructure:has(metadata[semantictag='questions_answers'])",data).attr('id');
+							UIFactory["Feedback"].displayQuestionEditor('demande','detail',null,parentid);
+							UIFactory["Feedback"].displayAll('feedbacks','detail');
+							//--------------------
+							$('a[data-toggle=tooltip]').tooltip({html:true});
+						}
+					});
+					//----------------
+					$.ajax({
+						type : "GET",
+						dataType : "xml",
+						url : "../../../"+serverBCK+"/credential",
+						data: "",
+						success : function(data) {
+							USER = new UIFactory["User"]($("user",data));
+							var navbar = getNavbar(portfolioid);
+							$("#navbar").html(navbar);
+							if (l_userrole=='etudiant' && g_userrole!='etudiant'){
+								profiles_list[0].displayView('profile-etudiant','lastname_firstname');
+							}
+						}
+					});
+				}
+			});
+		});
+		
+	</script>
+</body>
+</html>
+

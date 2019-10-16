@@ -1,0 +1,209 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+	<title>KIUT e-Portfolio UCP</title>
+			<!-- =========================================== -->
+	<link rel="icon" type="image/png" href="../img/faviconK.png">
+	<link rel="stylesheet" type="text/css" href="../../other/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../../other/css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="../../other/css/bootstrap-wysihtml5.css">
+	<link rel="stylesheet" type="text/css" href="../../other/css/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="../../other/css/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../karuta/css/karuta.css">
+	<link rel="stylesheet" type="text/css" href="../../other/pick-a-color/css/pick-a-color-1.1.8.min.css">
+    <!-- =========================================== -->
+    <script src="../../application/_init.js"></script>
+    <!-- =========================================== -->
+    <script src="../../other/js/jquery-1.10.2.js"></script>
+    <script src="../../other/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../../other/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../js/specific.js"></script>
+    <script>
+		//==================================
+		function callCAS() {
+		//==================================
+		var url = window.location.href;
+		var serverURL = url.substring(0,url.lastIndexOf(appliname+"/")-1);
+
+//		caslocation =     cas_url+"/login?service="+serverURL+"/"+serverFIL+"/rest/api/credential/login/cas?redir="+serverURL+"/"+appliname+"/application/php/main.php";
+		caslocation = cas_url+"/login?service="+serverURL+"/"+serverFIL+"/rest/api/credential/login/cas?redir="+serverURL+"/"+appliname+"/application/htm/main.htm";
+		//~ alert(appliname);
+		//~ alert(caslocation);
+		//~ exit;
+		window.location = caslocation;
+		}
+		//==================================
+		function callSubmit() {
+		//==================================
+			var username = document.getElementById("useridentifier").value;
+			var password = document.getElementById("password").value;
+			var data = "<credential><login>"+username+"</login><password>"+password+"</password></credential>";
+			$.ajaxSetup({
+				Accept: "application/xml",
+				contentType: "application/xml"
+				});
+			$.ajax({
+				type : "POST",
+				dataType : "xml",
+				url : "../../../../"+serverBCK+"/credential/login",
+				data: data,
+				success : function(data) {
+					var token = data.result;
+					if (elgg_installed && karuta_site == 'eportfolium')
+						loginElgg(username,password,function (token){window.location = "../main.htm?auth_token="+token;});
+					else
+						window.location = "main.htm";
+				}
+			});
+		}
+    </script>
+    <style>
+		header {
+			background-color:black;
+			height:20px;
+		}
+		footer {
+			background-color:black;
+			height:80px;
+			padding-top:20px;
+		}
+		#connexion {
+		margin-top:50px;
+		margin-bottom:50px;
+		padding:20px;
+		background-color:#e4f7fe;
+		border: 2px solid #0099cc;
+		}
+		#connexion-img, #firefox, #support, #help {
+			width:60px;
+		}
+		button {
+			background-color:black;
+			border-radius:0px;
+			color:white;
+			height:40px;
+			padding-left:20px;
+			padding-right:20px;
+			border: 1px solid black
+		}
+		#useridentifier, #password {
+			border-radius:0px;
+			height:40px;
+			border: 2px solid #0099cc;
+			margin-bottom: 0px;
+			width: 160px;
+		}
+		#fsh {
+			margin-top:30px;
+			margin-bottom:30px;
+			text-align:center;
+		}
+		a {
+			color:#53b9d2;
+		}
+		p {
+			padding:10px;
+		}
+		#logo {
+			margin-top:50px;
+		}
+		#accueil .span6 {
+			padding-left:50px;
+			padding-right:50px;
+		}
+		#specifique {
+			border: 1px solid gray;
+		}
+	</style>
+</head>
+
+<body style="">
+	<header></header>
+	<div id="accueil" class="container">
+		<div class="row-fluid">
+			<div class="span6">
+				<img id="logo" src="../img/ucp portfolio.jpg">
+				<!--
+				<p>
+					Cette plateforme est développée par le milieu universitaire et grâce à un partenariat
+					 franco-canadien entre l'IUT2 Grenoble et HEC Montréal
+					 avec la solution <span id='osk'>Open Source KARUTA</span>
+				</p>
+-->
+				<br><br>
+				<div id="specifique">
+					<img src="../img/iut_neuville.jpg">
+					<p style="text-align:justify">Cette plateforme e-portfolio est l'outil numérique central de la démarche de professionnalisation de l'étudiant, pour qu'il s'approprie ses compétences et pour faciliter son insertion dans le monde du travail.</p>
+<!--
+					<p style='text-align:justify'>
+					Cette plateforme e-portfolio est l'outil numérique central de la démarche
+					de professionnalisation de l'étudiant, pour faciliter son insertion dans le monde du travail, et également
+					 pour l'alumni dans le cadre de la Formation Tout au Long de La Vie.
+					</p>
+-->
+				</div>
+			</div>
+			<!-- ================================================================== -->
+			<div class="span6">
+				<div id="connexion">
+					<h2><img id="connexion-img" src="../img/login.png"> Vous connecter</h2>
+										<div id="connexion-cas" style="display:block">
+						<h5>Connexion avec un compte universitaire (CAS)</h5>
+						<button type="submit" onclick="javascript:callCAS()">S'identifier</button>
+					</div>
+										<h5>Connexion hors compte universitaire</h5>
+					<input id="useridentifier" type="text" placeholder="login">
+					<input id="password" type="password" placeholder="mot de passe">
+					<button type="submit" onclick="javascript:callSubmit()">Envoyer</button>
+				</div>
+				<div id="fsh" class="row-fluid">
+					<div class="span4">
+						<img id="firefox" src="../img/firefox.png">
+						<p>Optimisé pour Firefox.<br>Évitez Internet Explorer.</p>
+					</div>
+				<!--	<div class='span4'>
+						<img id='support' src='../img/support.png'/>
+						<p> Votre compte ne fonctionne pas ?</br><a href='https://monucp.u-cergy.fr'>Consultez la Foire aux questions</a></p>
+					</div> -->
+					<div class="span4">
+						<img id="help" src="../img/help.png">
+						<p><a href="https://docs.google.com/document/d/1qhi7Uf_ZMsJpDNzfdvvy-Ii_bt4ztaBUansbjNQxumQ/edit">Afficher le <span id="guide">guide</span> d'utilisation du portfolio</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- /container -->
+	<p></p>
+	<p></p>
+		<footer id="main-footer"><div class="container">	<div style="font-size: 14px; text-align: center; margin-left: 25px;float:left;margin-top:0px"><a target="_blank" href="https://service-ingenierie-pedagogique.u-cergy.fr">           <img src="../img/logo_service.jpg" style="height:70px"></a>			  &nbsp; |&nbsp;&nbsp;&nbsp;			<a target="_blank" href="https://docs.google.com/document/d/1YRAMsuUwO5VtKca1Jo7mDJMyuxZ0Dnvc44TAB2weRa0/edit?usp=sharing">Mentions légales</a>			  &nbsp; &nbsp;&nbsp; |&nbsp; &nbsp;		</div>		<div style="text-align:center;color:white;">			Basé sur <a target="_blank" href="http://karuta-france-portfolio.fr" rel="noopener"><img src="../img//logo-karuta-transp-minimini.png" width="100" height="21"></a>			et <img src="../img//iut2-et-K-IUT.jpg" width="250" height="42" style="margin:5px">		</div>	</div>	<!-- .container --></footer>
+
+	<script language="javascript">
+		//------------------------------
+		$(document).ready(function() {
+			if (cas_url!="")
+				$("#connexion-cas").show();
+			$("#main-footer").html(getFooter());
+			var ua = navigator.userAgent;
+			if (ua.indexOf('MSIE')>-1 || ua.indexOf('Trident')>-1 || ua.indexOf('Edge')>-1)
+				alert("Le portfolio n'est pas compatible avec Internet Explorer ou Edge. Veuillez utiliser le navigateur Firefox.");
+			$.ajax({
+				type : "POST",
+				dataType : "xml",
+				url : "../../../../"+serverBCK+"/credential/logout",
+				data: ""
+			});
+			$('#password').keypress(function(e) {
+				var code= (e.keyCode ? e.keyCode : e.which);
+				if (code == 13)
+					callSubmit();
+			});
+		});
+		//------------------------------
+	</script>
+
+
+
+
+</body></html>
