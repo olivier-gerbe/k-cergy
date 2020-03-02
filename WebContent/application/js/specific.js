@@ -28,3 +28,35 @@ function getFooter() {
 	return html;
 }
 
+//------ EXEC BATCH AT USER CREATION ------------------
+var g_execbatch = true;
+var g_execbatchbuttonlabel1 = [];
+	g_execbatchbuttonlabel1['fr'] = "Patience! Création de votre portfolio ...";
+var g_json = {};
+
+//=======================
+function prepareBatch()
+//=======================
+{
+	var today=new Date();
+	var annee = today.getFullYear();
+	var mois = today.getMonth() + 1;
+	if (mois<10)
+		mois = "0"+mois;
+	// ---- global variables ---------
+	g_json['model_code'] = "IUT2batch.autocreer-portfolios-sans-superviseur";
+	g_json['portfolio_code'] = "IUT2portfolios.IUT2-portfolio";
+	g_json['profile_code'] = "IUT2portfolios.IUT2-profile";
+	g_json['cv_code'] = "IUT2portfolios.IUT2-cv";
+	g_json['projet_code'] = "IUT2portfolios.IUT2-projet";
+	g_json['diploma_begin'] = annee+"-"+mois;
+	// ---- local variables ---------
+	g_json['lines'] = [];
+	g_json.lines[0] =
+	{
+		"etudiant_id" : USER.username,
+		"etudiant_email" : USER.email,
+		"etudiant_lastname" : USER.lastname,
+		"etudiant_firstname" : USER.firstname,
+	};
+}//----------------------------------------------------

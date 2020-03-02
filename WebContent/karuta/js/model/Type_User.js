@@ -33,6 +33,10 @@ UIFactory["User"] = function( node )
 {
 	this.id = $(node).attr('id');
 	this.node = node;
+	this.firstname = $("firstname",node).text();
+	this.lastname = $("lastname",node).text();
+	this.username = $("username",node).text();
+	this.email = $("email",node).text();
 	this.username_node = $("username",node);
 	this.firstname_node = $("firstname",node);
 	this.lastname_node = $("lastname",node);

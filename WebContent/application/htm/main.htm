@@ -28,6 +28,7 @@
 		<!-- =============================================================== -->
 		<script src="../../karuta/js/karuta.js"></script>
 		<script src="../../karuta/js/UICom.js"></script>
+		<script src="../../karuta/js/batch.js"></script>
 		<!-- =============================================================== -->
 		<script src="../../karuta/js/model/Type_Portfolio.js"></script>
 		<script src="../../karuta/js/model/Type_Node.js"></script>
@@ -62,6 +63,7 @@
 		<script src="../../karuta/js/resources/Type_Video.js"></script>
 		<!-- =============================================================== -->
 		<script src="../../application/_init.js"></script>
+		<script src="../../application/js/specific.js"></script>
 		<!-- =============================================================== -->
 		<script src="../../karuta/js/version.js"></script>
 		<!-- =============================================================== -->
@@ -133,6 +135,7 @@
 			}
 		});
 		//----------------
+		alert('main');
 		$.ajax({
 			Accept: "application/xml",
 			contentType: "application/xml",
@@ -140,7 +143,13 @@
 			dataType : "xml",
 			url : "../../../"+serverBCK+"/portfolios?active=1",
 			success : function(data) {
-				selectPortfolio(data);
+				var portfolios = $("portfolio",data);
+				//---------------------------------------------------
+				if (portfolios.length==0 && g_execbatch!=undefined && g_execbatch){
+					displayExecBatchButton();
+				} else {
+					selectPortfolio(data);
+				}
 			}
 		});
 		//----------------
