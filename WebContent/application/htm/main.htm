@@ -62,6 +62,9 @@
 		<script src="../../karuta/js/resources/Type_Item.js"></script>
 		<script src="../../karuta/js/resources/Type_Video.js"></script>
 		<!-- =============================================================== -->
+		<script src="../../other/js/spin.js"></script>
+		<script src="../../other/js/jquery.spin.js"></script>
+		<!-- =============================================================== -->
 		<script src="../../application/_init.js"></script>
 		<script src="../../application/js/specific.js"></script>
 		<!-- =============================================================== -->
@@ -75,8 +78,12 @@
 
 </head>
 <body>
-	
+	<div id='wait-window' class='modal' style='height:100px;'>
+		<div id='wait-window-body' class='modal-body'>Patience...</div>
+		<div id='wait-spin'></div>
+	</div>
 	<script language='javascript'>
+	var spinner1 = new Spinner().spin(document.getElementById('wait-spin'));
 
 
 	//====================================
@@ -110,46 +117,51 @@
 				success : function(data) {
 					var usergroups = $("group",data);
 					userrole = $("role",usergroups[0]).text();
+					if(userrole=='etudiant')
+						window.location = "mainEtudiant2.htm?portfolioid="+portfolioid;
+					else if (!USER.admin)
+						window.location = "mainSuperviseur.htm";
+					else
+						window.location = "admin.htm";
 				}
 			});
-			if(userrole=='etudiant')
-				window.location = "mainEtudiant2.htm?portfolioid="+portfolioid;
-			else if (!USER.admin)
-				window.location = "mainSuperviseur.htm";
-			else
-				window.location = "admin.htm";
 		}
 	}
 	
 
 	$(document).ready(function() {
-		$.ajaxSetup({async: false});
 		//----------------
 		$.ajax({
 			type : "GET",
 			dataType : "xml",
 			url : "../../../"+serverBCK+"/credential",
 			data: "",
+			beforeSend: function(){
+				$("#wait-window").show();
+			},
 			success : function(data) {
 				USER = new UIFactory["User"]($("user",data));
-			}
-		});
-		//----------------
-		alert('main');
-		$.ajax({
-			Accept: "application/xml",
-			contentType: "application/xml",
-			type : "GET",
-			dataType : "xml",
-			url : "../../../"+serverBCK+"/portfolios?active=1",
-			success : function(data) {
-				var portfolios = $("portfolio",data);
-				//---------------------------------------------------
-				if (portfolios.length==0 && g_execbatch!=undefined && g_execbatch){
-					displayExecBatchButton();
-				} else {
-					selectPortfolio(data);
-				}
+				//----------------
+				$.ajax({
+					Accept: "application/xml",
+					contentType: "application/xml",
+					type : "GET",
+					dataType : "xml",
+					url : "../../../"+serverBCK+"/portfolios?active=1",
+					success : function(data) {
+						var portfolios = $("portfolio",data);
+						//---------------------------------------------------
+						if (portfolios.length==0 && g_execbatch!=undefined && g_execbatch){
+							if (confirm("Voulez-vous créer votre portfolio ?")) {
+								displayExecBatchButton();
+							} else {
+								window.location="indexKIUT.html";
+							}
+						} else {
+							selectPortfolio(data);
+						}
+					}
+				});
 			}
 		});
 		//----------------

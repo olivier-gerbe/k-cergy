@@ -6,7 +6,7 @@ var appliname = 'ktest';
 var karutaname = 'ktest';
 	var applitype = 'KIUT';   // FTLV ou KIUT
 //---------
-var bckname = '';
+var bckname = '-test';
 var serverBCK_API = "../../../karuta-backend"+bckname+"/rest/api";
 var serverBCK = "karuta-backend"+bckname+"/rest/api";
 var serverFIL = "karuta-backend"+bckname;
