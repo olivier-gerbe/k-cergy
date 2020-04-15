@@ -2,11 +2,11 @@
 var application_version = "3.0";
 var application_date = "2019-09-20";
 //----------------------------------
-var appliname = 'ktest';
-var karutaname = 'ktest';
+var appliname = 'k-iut';
+var karutaname = 'k-iut';
 	var applitype = 'KIUT';   // FTLV ou KIUT
 //---------
-var bckname = '-test';
+var bckname = '';
 var serverBCK_API = "../../../karuta-backend"+bckname+"/rest/api";
 var serverBCK = "karuta-backend"+bckname+"/rest/api";
 var serverFIL = "karuta-backend"+bckname;

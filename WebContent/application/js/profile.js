@@ -98,6 +98,8 @@ UIFactory["Profile"].prototype.displayEditor = function(destid,type,lang) {
 		html += "<div class='span7'>";
 		html += "	<div id='profil-detail' class='media'>";
 		html += "		<div class='profile alert alert-block'>";
+		html += "			<div> Nom <span id='lastname'></span></div>";
+		html += "			<div> Prénom <span id='firstname'></span></div>";
 		html += "			<div>Photo<span id='help-profil-photo'></span></div>";
 		html += "			<div id='profil-photo'></div>";
 		html += "			<br><br><label id='email_profil' class='inline'>Courriel<span id='help-profil-courriel'></span> : </label>";
@@ -113,6 +115,8 @@ UIFactory["Profile"].prototype.displayEditor = function(destid,type,lang) {
 		$("#"+destid).append($(html));
 		UICom.structure["ui"][this.photo_nodeid].resource.displayEditor("profil-photo");
 		$("#email_profil").append(UICom.structure["ui"][this.email_nodeid].resource.getEditor());
+		$("#lastname").append(UICom.structure["ui"][this.lastname_nodeid].resource.getEditor());
+		$("#firstname").append(UICom.structure["ui"][this.firstname_nodeid].resource.getEditor());
 	}
 	if (type=="FTLV"){
 		var html = "";
